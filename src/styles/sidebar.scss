@@ -1,4 +1,27 @@
 #app {
+  .el-table--medium td, .el-table--medium .th{
+    padding: 5px 0;
+  }
+  .el-table--border td, .el-table--border th, .el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+    border-right: none;
+  }
+  .el-table--border, .el-table--group {
+    border: none;
+  }
+  .el-table--border::after, .el-table--group::after{
+    width: 0;
+  }
+  .el-table thead th{
+    // todo:variable mixin
+    border-right: 1px solid #efecec;
+    border-bottom: 1px solid #b5b5b5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dbdbdb)) !important;
+    // background-image: -webkit-linear-gradient(top, #fff, #dbdbdb) !important;
+    // background-image: -moz-linear-gradient(top, #fff, #dbdbdb) !important;
+    // background-image: -ms-linear-gradient(top, #fff, #dbdbdb) !important;
+    // background-image: -o-linear-gradient(top, #fff, #dbdbdb) !important;
+    // background-image: linear-gradient(top, #fff, #dbdbdb) !important;
+  }
   // 主体区域
   .main-container {
     min-height: 100%;
@@ -47,6 +70,10 @@
       height: 100%;
       width: 100% !important;
     }
+    .el-menu-item, .el-submenu__title{
+      height: 38px;
+      line-height: 38px;
+    }
     .is-active > .el-submenu__title{
         color: #f4f4f5!important;
     }
@@ -90,6 +117,8 @@
   }
   .sidebar-container .nest-menu .el-submenu>.el-submenu__title,
   .sidebar-container .el-submenu .el-menu-item {
+    height: 35px;
+    line-height: 35px;
     min-width: 180px !important;
     background-color: $subMenuBg !important;
     &:hover {
